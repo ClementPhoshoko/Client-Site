@@ -14,8 +14,8 @@ const services = [
 
 export default function Services() {
   return <section className="section" id="services"><Container>
-    <SectionHeading eyebrow="What we do" title="IT that works for the way you work." description="From everyday support to a more secure cloud setup, we help simplify technology and make it work harder for your organisation." />
-    <div className="service-grid">{services.map(([title, text], index) => <article className="service-card" key={title}>
+    <div data-services-reveal><SectionHeading eyebrow="What we do" title="IT that works for the way you work." description="From everyday support to a more secure cloud setup, we help simplify technology and make it work harder for your organisation." /></div>
+    <div className="service-grid">{services.map(([title, text], index) => <article className="service-card" data-services-reveal key={title}>
       <span className="service-number">{String(index + 1).padStart(2, '0')}</span><h3>{title}</h3><p>{text}</p>
     </article>)}</div>
   </Container></section>
