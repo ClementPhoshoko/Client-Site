@@ -11,8 +11,8 @@
   --color-border: #e2e8f0;
   --color-button-primary: #148be1;
   --color-button-hover: #1177c5;
-  --color-button-glass: rgb(20 139 225 / 10%);
-  --color-button-glass-hover: rgb(20 139 225 / 16%);
-  --shadow-button: 0 3px 10px rgb(13 27 48 / 10%);
+  --color-button-glass: var(--color-surface);
+  --color-button-glass-hover: var(--color-surface);
+  --shadow-button: 0 2px 8px rgb(13 27 48 / 12%);
   --color-focus-ring: #148be1;
 }

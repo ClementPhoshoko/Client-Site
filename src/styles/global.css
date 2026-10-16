@@ -16,8 +16,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .main-nav a, .text-link { color: var(--color-text-secondary); font-size: .92rem; font-weight: 600; text-decoration: none; }
 .main-nav a:hover, .text-link:hover { color: var(--color-brand-accent); }
 .main-nav a[aria-current='page'] { color: var(--color-brand-primary); }
-.button { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 3rem; padding: .7rem 1.2rem; border: 0; border-radius: .55rem; background: var(--color-button-glass); color: var(--color-brand-primary); box-shadow: var(--shadow-button), inset 0 1px 0 rgb(255 255 255 / 85%); backdrop-filter: blur(10px); font-weight: 700; text-decoration: none; cursor: pointer; transition: background .15s ease, box-shadow .15s ease, transform .15s ease; }
-.button:hover { background: var(--color-button-glass-hover); box-shadow: 0 5px 14px rgb(13 27 48 / 13%), inset 0 1px 0 rgb(255 255 255 / 90%); }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 3rem; padding: .7rem 1.2rem; border: 0; border-radius: .55rem; background: var(--color-button-glass); color: var(--color-brand-primary); box-shadow: var(--shadow-button); backdrop-filter: blur(10px); font-weight: 700; text-decoration: none; cursor: pointer; transition: background .15s ease, box-shadow .15s ease, transform .15s ease; }
+.button:hover { background: var(--color-button-glass-hover); box-shadow: 0 4px 12px rgb(13 27 48 / 16%); }
 .button:active { transform: translateY(1px); }
 .button-icon { width: 1rem; height: 1rem; flex: none; color: var(--color-brand-accent); }
 .button:disabled { opacity: .7; cursor: wait; }
