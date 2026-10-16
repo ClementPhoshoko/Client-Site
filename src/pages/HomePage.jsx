@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom'
 import Container from '../components/Container.jsx'
 import Hero from '../sections/Hero.jsx'
+import HomeOutcomes from '../sections/HomeOutcomes.jsx'
+import HomeFaq from '../sections/HomeFaq.jsx'
 
 const links = [
-  { title: 'Explore our services', copy: 'IT support, Microsoft 365, cloud, security and more.', to: '/services' },
+  { title: 'Explore our services', copy: 'IT support, Microsoft 365, business email, cloud and security.', to: '/services' },
   { title: 'Who we work with', copy: 'Practical IT for schools, churches, small businesses and growing teams.', to: '/industries' },
 ]
 
 export default function HomePage() {
   return <>
     <Hero />
+    <HomeOutcomes />
     <section className="section home-paths">
       <Container>
         <div className="home-path-grid">
@@ -22,5 +25,6 @@ export default function HomePage() {
         </div>
       </Container>
     </section>
+    <HomeFaq />
   </>
 }
