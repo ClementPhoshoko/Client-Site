@@ -29,7 +29,7 @@ export default function Contact() {
   }
 
   return <section className="section contact-section" id="contact"><Container className="contact-layout">
-    <div className="contact-copy">
+    <div className="contact-copy contact-copy--enter">
       <SectionHeading eyebrow="Get in touch" title="Let’s make IT work better for you." description="Tell us what your organisation needs. We’ll be happy to talk through a practical next step." />
       <dl className="contact-details">
         <div><dt>Phone</dt><dd><a href="tel:+27733182386">+27 73 318 2386</a></dd></div>
@@ -37,7 +37,7 @@ export default function Contact() {
         <div><dt>Address</dt><dd>6606 Musese Street, Birch Acres,<br />Kempton Park, South Africa</dd></div>
       </dl>
     </div>
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form className="contact-form contact-form--enter" onSubmit={handleSubmit}>
       <div className="form-trap" aria-hidden="true"><label htmlFor="website">Leave this field empty</label><input id="website" name="website" tabIndex="-1" autoComplete="off" /></div>
       <div className="form-row"><label htmlFor="name">Your name</label><input id="name" name="name" autoComplete="name" required /></div>
       <div className="form-row"><label htmlFor="email">Work email</label><input id="email" name="email" type="email" autoComplete="email" required /></div>

@@ -131,6 +131,11 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
 .contact-details dd { margin: 0; color: var(--color-brand-primary); font-weight: 600; }
 .contact-details a { text-decoration: none; }
 .contact-details a:hover { color: var(--color-brand-accent); }
+.contact-page [data-contact-reveal] { transition: opacity .56s ease, transform .56s cubic-bezier(.22, 1, .36, 1); }
+.contact-page [data-contact-reveal].contact-reveal--pending { opacity: 0; transform: translateY(12px); }
+.contact-copy--enter { animation: contact-copy-enter .52s cubic-bezier(.22, 1, .36, 1) both; }
+.contact-form--enter { animation: contact-copy-enter .58s cubic-bezier(.22, 1, .36, 1) 80ms both; }
+@keyframes contact-copy-enter { from { opacity: .72; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 .contact-form { display: grid; gap: 1.25rem; padding: clamp(1.4rem, 3vw, 2.2rem); border: 1px solid rgb(255 255 255 / 85%); border-radius: 1rem; background: rgb(255 255 255 / 78%); box-shadow: 0 12px 34px rgb(13 27 48 / 7%); backdrop-filter: blur(16px); }
 .form-row { display: grid; gap: .25rem; }
 .form-row label { color: var(--color-brand-primary); font-size: .84rem; font-weight: 650; }
@@ -209,4 +214,4 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
   .footer-details { grid-template-columns: 1fr; gap: .75rem; }
   .footer-bottom { align-items: flex-start; flex-direction: column; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } .home-page [data-home-reveal] { opacity: 1; transform: none; transition: none; } .home-page > section > .container { opacity: 1; transform: none; transition: none; } .home-page > section .home-outcome h3, .home-page > section .home-service-card h3 { transform: none; transition: none; } .services-page [data-services-reveal] { opacity: 1; transform: none; transition: none; } .industries-page [data-industries-reveal] { opacity: 1; transform: none; transition: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } .home-page [data-home-reveal] { opacity: 1; transform: none; transition: none; } .home-page > section > .container { opacity: 1; transform: none; transition: none; } .home-page > section .home-outcome h3, .home-page > section .home-service-card h3 { transform: none; transition: none; } .services-page [data-services-reveal] { opacity: 1; transform: none; transition: none; } .industries-page [data-industries-reveal] { opacity: 1; transform: none; transition: none; } .contact-page [data-contact-reveal] { opacity: 1; transform: none; transition: none; } .contact-copy--enter, .contact-form--enter { animation: none; opacity: 1; transform: none; } }
