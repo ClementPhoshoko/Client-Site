@@ -19,9 +19,9 @@ const outcomes = [
 export default function HomeOutcomes() {
   return <section className="home-outcomes section">
     <Container>
-      <SectionHeading eyebrow="The PHM commitment" title="Reliable technology, practical solutions and IT support you can understand." />
+      <div data-home-reveal><SectionHeading eyebrow="The PHM commitment" title="Reliable technology, practical solutions and IT support you can understand." /></div>
       <div className="home-outcomes-grid">
-        {outcomes.map((outcome, index) => <article className="home-outcome" key={outcome.title}>
+        {outcomes.map((outcome, index) => <article className="home-outcome" data-home-reveal key={outcome.title}>
           <span className="home-outcome-index">0{index + 1}</span>
           <h3>{outcome.title}</h3>
           <p>{outcome.text}</p>

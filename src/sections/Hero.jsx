@@ -4,7 +4,7 @@ import ArrowIcon from '../components/ArrowIcon.jsx'
 
 export default function Hero() {
   return <section className="hero" id="top"><Container className="hero-inner">
-    <div className="hero-copy">
+    <div className="hero-copy" data-home-reveal>
       <p className="eyebrow">IT support · Cloud · Security</p>
       <h1>Technology that helps your business move forward.</h1>
       <p className="hero-description">As a growing technology provider, PHM helps businesses and organisations simplify IT, improve productivity and build reliable, secure digital working environments.</p>
