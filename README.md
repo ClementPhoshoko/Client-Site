@@ -36,6 +36,8 @@ src/
   styles/      shared design tokens and global responsive styles
   App.jsx      homepage composition
   main.jsx     React entry point
+public/assets/
+  company logo, transparent illustrations, and workspace photography
 ```
 
 The site uses focused Home, Services, Industries, and Contact pages. It has no About or Our Story page. Shared color values live in `src/styles/tokens.css`.

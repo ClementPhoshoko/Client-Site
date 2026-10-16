@@ -8,8 +8,9 @@ export default function Header() {
   return <header className="site-header">
     <Container className="header-inner">
       <Link className="wordmark" to="/" aria-label="PHM Professional Services home">
-        <span className="wordmark-mark" aria-hidden="true">P</span>
-        <span>PHM <span className="wordmark-light">Professional Services</span></span>
+        <span className="wordmark-logo-window">
+          <img className="wordmark-logo" src="/assets/PHM%20Professional%20Services%20Logo.png" alt="PHM Professional Services" />
+        </span>
       </Link>
       <nav className="main-nav" aria-label="Main navigation">
         {links.map(([label, to]) => <NavLink key={to} to={to}>{label}</NavLink>)}
