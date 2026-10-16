@@ -47,7 +47,7 @@ The site uses focused Home, Services, Industries, and Contact pages. It has no A
 The contact form sends submissions to the Vercel serverless function in `api/contact.js`. That function uses Resend, keeping `RESEND_API_KEY` on the server rather than exposing it in browser code.
 
 1. Create a Resend account, verify a sending domain, and create an API key.
-2. Copy `.env.example` to `.env` and set `RESEND_API_KEY`, `RESEND_FROM_EMAIL` (an address on the verified domain), and `CONTACT_TO_EMAIL`.
+2. Copy `.env.example` to `.env` and set `RESEND_API_KEY`, `RESEND_FROM_EMAIL` (an address on the verified domain), and `CONTACT_TO_EMAIL`. Set `SITE_URL` to the public website origin so the PHM logo loads in contact notification emails.
 3. Run `npm run dev`. The Vite development server provides the same `/api/contact` endpoint locally.
 4. For Vercel deployment, add those three variables in the project's Environment Variables settings. Do not use a `VITE_` prefix for secrets.
 

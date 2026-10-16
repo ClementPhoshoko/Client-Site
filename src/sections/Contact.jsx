@@ -9,9 +9,10 @@ export default function Contact() {
 
   async function handleSubmit(event) {
     event.preventDefault()
+    const form = event.currentTarget
     setStatus('sending')
     try {
-      const formData = new FormData(event.currentTarget)
+      const formData = new FormData(form)
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -24,7 +25,7 @@ export default function Contact() {
         setFeedback(result?.message || 'We could not send your enquiry. Please try again or use the full contact details listed alongside this form.')
         return
       }
-      event.currentTarget.reset()
+      form.reset()
       setStatus('success')
       setFeedback(result.message || 'Thanks for getting in touch. Your enquiry has been sent.')
     } catch (error) {
