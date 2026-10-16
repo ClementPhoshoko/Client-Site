@@ -17,12 +17,18 @@ export default function Contact() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(Object.fromEntries(formData.entries())),
       })
-      const result = await response.json()
-      if (!response.ok) throw new Error('Submission failed')
+      const result = await response.json().catch(() => null)
+      if (!response.ok) {
+        console.error(`Contact form endpoint returned HTTP ${response.status}.`)
+        setStatus('error')
+        setFeedback(result?.message || 'We could not send your enquiry. Please try again or use the full contact details listed alongside this form.')
+        return
+      }
       event.currentTarget.reset()
       setStatus('success')
       setFeedback(result.message || 'Thanks for getting in touch. Your enquiry has been sent.')
-    } catch {
+    } catch (error) {
+      console.error('Contact form request could not reach the endpoint:', error)
       setStatus('error')
       setFeedback('We could not send your enquiry. Please try again or use the full contact details listed alongside this form.')
     }
