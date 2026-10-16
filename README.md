@@ -30,13 +30,15 @@ npm run preview
 ```text
 src/
   components/  shared layout and content components
-  sections/    homepage sections: hero, services, industries, contact
+  sections/    page content: hero, services, industries, contact
+  pages/       Home, Services, Industries, Contact, and not-found routes
+  server/      shared server-side Resend mail handler
   styles/      shared design tokens and global responsive styles
   App.jsx      homepage composition
   main.jsx     React entry point
 ```
 
-The site is a single-page company website. Shared color values live in `src/styles/tokens.css`.
+The site uses focused Home, Services, Industries, and Contact pages. It has no About or Our Story page. Shared color values live in `src/styles/tokens.css`.
 
 ## Contact form configuration
 

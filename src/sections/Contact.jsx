@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Container from '../components/Container.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
+import ArrowIcon from '../components/ArrowIcon.jsx'
 
 export default function Contact() {
   const [status, setStatus] = useState('idle')
@@ -23,7 +24,7 @@ export default function Contact() {
       setFeedback(result.message || 'Thanks for getting in touch. Your enquiry has been sent.')
     } catch {
       setStatus('error')
-      setFeedback('We could not send your enquiry. Please email info@phmps.co.za or call +27 73 318 2386.')
+      setFeedback('We could not send your enquiry. Please try again or use the full contact details listed alongside this form.')
     }
   }
 
@@ -42,7 +43,7 @@ export default function Contact() {
       <div className="form-row"><label htmlFor="email">Work email</label><input id="email" name="email" type="email" autoComplete="email" required /></div>
       <div className="form-row"><label htmlFor="organisation">Organisation <span>(optional)</span></label><input id="organisation" name="organisation" autoComplete="organization" /></div>
       <div className="form-row"><label htmlFor="message">How can we help?</label><textarea id="message" name="message" rows="4" required /></div>
-      <button className="button" type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Send enquiry'}</button>
+      <button className="button" type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : <>Send enquiry <ArrowIcon /></>}</button>
       <p className={`form-feedback form-feedback--${status}`} role="status" aria-live="polite">{feedback}</p>
     </form>
   </Container></section>
