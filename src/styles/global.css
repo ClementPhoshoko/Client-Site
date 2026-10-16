@@ -22,7 +22,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--color-focus-rin
 .button-icon { width: 1rem; height: 1rem; flex: none; color: var(--color-brand-accent); }
 .button:disabled { opacity: .7; cursor: wait; }
 .button--small { min-height: 2.55rem; padding: .55rem 1rem; font-size: .9rem; }
-.hero { border-bottom: 1px solid var(--color-border); background: linear-gradient(105deg, var(--color-background) 65%, var(--color-background-secondary) 65%); }
+.hero { border-bottom: 1px solid var(--color-border); background-color: var(--color-background); background-image: linear-gradient(105deg, rgb(255 255 255 / 88%) 0%, rgb(255 255 255 / 88%) 58%, rgb(243 247 251 / 32%) 74%, rgb(243 247 251 / 24%) 100%), url('/assets/Collaborative%20Coworking%20at%20the%20Laptop.png'); background-position: center, right center; background-repeat: no-repeat; background-size: cover, auto 94%; }
 .hero-inner { min-height: 35rem; display: grid; grid-template-columns: minmax(0, 1fr) minmax(22rem, 27rem); align-items: center; gap: 4rem; padding-block: 5rem; }
 .hero-copy { max-width: 47rem; }
 .eyebrow { margin: 0 0 .85rem; color: var(--color-brand-accent); font-size: .77rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
@@ -34,8 +34,6 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
 .text-link span { padding-left: .25rem; color: var(--color-brand-accent); }
 .text-link-icon { width: 1rem; height: 1rem; margin-left: .2rem; vertical-align: middle; color: var(--color-brand-accent); }
 .hero-note { margin: 2.3rem 0 0; color: var(--color-text-secondary); font-size: .88rem; }
-.hero-visual { position: relative; display: grid; min-height: 23rem; place-items: center; margin: 0; }
-.hero-visual > img { display: block; width: 112%; max-width: none; height: auto; margin-top: -1.4rem; filter: drop-shadow(0 12px 14px rgb(13 27 48 / 12%)); }
 .section { padding-block: 6.25rem; }
 .page-intro { padding-block: 4.5rem; border-bottom: 1px solid var(--color-border); background: var(--color-background-secondary); }
 .page-intro--contact { background-image: linear-gradient(90deg, var(--color-background-secondary) 0%, rgb(243 247 251 / 94%) 34%, rgb(243 247 251 / 38%) 66%, rgb(243 247 251 / 12%) 100%), url('/assets/Modern%20Minimalist%20Office%20Workspace.png'); background-position: center, right center; background-size: cover, auto 180%; }
@@ -104,7 +102,7 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
 .industry-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; margin: 0; padding: 0; list-style: none; }
 .industry-list li { display: flex; align-items: flex-start; gap: .65rem; padding: 1rem 0; border-bottom: 1px solid #d6e0ea; color: var(--color-brand-primary); font-weight: 600; }
 .industry-list li span { color: var(--color-brand-accent); }
-.contact-section { padding-block: 6.5rem; background: var(--color-background-secondary); }
+.contact-section { padding-block: 6.5rem; background-color: var(--color-background-secondary); background-image: url('/assets/Modern%20Cloud%20Tech%20Ecosystem.png'); background-repeat: no-repeat; background-position: 14% bottom; background-size: min(28rem, 38vw) auto; }
 .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; }
 .contact-copy .section-heading { margin-bottom: 2rem; }
 .contact-details { display: grid; gap: 1rem; margin: 0; }
@@ -157,17 +155,16 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
   .main-nav { order: 3; width: 100%; justify-content: space-between; gap: .75rem; padding: .2rem 0; }
   .main-nav a { font-size: .84rem; }
   .header-cta { margin-left: auto; }
-  .hero { background: var(--color-background); }
+  .hero { background-image: linear-gradient(105deg, rgb(255 255 255 / 93%) 0%, rgb(255 255 255 / 93%) 58%, rgb(243 247 251 / 46%) 76%, rgb(243 247 251 / 34%) 100%), url('/assets/Collaborative%20Coworking%20at%20the%20Laptop.png'); background-position: center, right bottom; background-size: cover, auto 55%; }
   .hero-inner { min-height: auto; grid-template-columns: 1fr; gap: 2.5rem; padding-block: 4.5rem; }
   h1 { font-size: clamp(2.65rem, 12vw, 4.2rem); }
   .hero-description { font-size: 1.05rem; }
-  .hero-visual { min-height: 18rem; }
-  .hero-visual > img { width: 108%; }
   .section { padding-block: 4.5rem; }
   .service-grid { grid-template-columns: 1fr; }
   .service-card { min-height: auto; padding: 1.25rem; }
   .service-card h3 { margin-top: .7rem; }
   .industries-layout, .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .contact-section { background-position: 8% bottom; background-size: min(21rem, 64vw) auto; }
   .page-intro-layout { min-height: 0; grid-template-columns: 1fr; gap: 1.5rem; }
   .faq-layout { grid-template-columns: 1fr; gap: 2rem; }
   .faq-accordion { height: auto; overflow: visible; scrollbar-gutter: auto; }

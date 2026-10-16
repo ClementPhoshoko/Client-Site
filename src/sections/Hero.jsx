@@ -11,8 +11,5 @@ export default function Hero() {
       <div className="hero-actions"><Link className="button" to="/contact">Talk to Us <ArrowIcon diagonal /></Link><Link className="text-link" to="/services">Explore our services <ArrowIcon className="text-link-icon" /></Link></div>
       <p className="hero-note">Founded from a vision in 2022, with more than seven years of hands-on IT experience.</p>
     </div>
-    <figure className="hero-visual">
-      <img src="/assets/Collaborative%20Coworking%20at%20the%20Laptop.png" alt="" fetchPriority="high" />
-    </figure>
   </Container></section>
 }
