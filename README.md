@@ -30,7 +30,7 @@ npm run preview
 ```text
 src/
   components/  shared layout and content components
-  sections/    page content: hero, home outcomes and FAQs, services, industries, contact
+  sections/    page content: hero, home outcomes, services preview and FAQs, services, industries, contact
   pages/       Home, Services, Industries, Contact, and not-found routes
   server/      shared server-side Resend mail handler
   styles/      shared design tokens and global responsive styles

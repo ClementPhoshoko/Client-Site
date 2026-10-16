@@ -10,8 +10,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--color-focus-rin
 .site-header { position: sticky; top: 0; z-index: 5; border-bottom: 1px solid var(--color-border); background: rgb(255 255 255 / 96%); }
 .header-inner { min-height: 4.75rem; display: flex; align-items: center; gap: 2rem; }
 .wordmark { display: inline-flex; align-items: center; color: var(--color-brand-primary); text-decoration: none; white-space: nowrap; }
-.wordmark-logo-window { position: relative; display: block; width: 13.75rem; height: 4.6rem; overflow: hidden; }
-.wordmark-logo { position: absolute; top: -2.55rem; left: 0; display: block; width: 13.75rem; height: auto; }
+.wordmark-logo-window { position: relative; display: block; width: 11.75rem; height: 4.6rem; overflow: hidden; }
+.wordmark-logo { position: absolute; top: -2.05rem; left: 0; display: block; width: 11.75rem; height: auto; }
 .main-nav { display: flex; align-items: center; justify-content: flex-end; gap: 2rem; margin-left: auto; }
 .main-nav a, .text-link { color: var(--color-text-secondary); font-size: .92rem; font-weight: 600; text-decoration: none; }
 .main-nav a:hover, .text-link:hover { color: var(--color-brand-accent); }
@@ -45,7 +45,6 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
 .intro-art img { display: block; width: 100%; max-height: 18rem; object-fit: contain; filter: drop-shadow(0 10px 12px rgb(13 27 48 / 10%)); }
 .contact-photo { height: 15rem; overflow: hidden; border-radius: .75rem; box-shadow: 0 8px 20px rgb(13 27 48 / 10%); }
 .contact-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.home-path-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
 .home-outcomes { padding-bottom: 2rem; }
 .home-outcomes .section-heading { margin-bottom: 2rem; }
 .home-outcomes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
@@ -54,12 +53,19 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
 .home-outcome-index { color: var(--color-brand-accent); font-size: .76rem; font-weight: 700; letter-spacing: .06em; }
 .home-outcome h3 { margin: .75rem 0 .45rem; font-size: 1.12rem; }
 .home-outcome p { max-width: 22rem; margin: 0; color: var(--color-text-secondary); font-size: .94rem; }
-.home-path-card { position: relative; min-height: 13rem; padding: 1.75rem; border: 1px solid var(--color-border); background: var(--color-surface); text-decoration: none; transition: border-color .15s ease, transform .15s ease; }
-.home-path-card:hover { transform: translateY(-2px); border-color: var(--color-brand-accent); }
-.home-path-card .eyebrow { font-size: .7rem; }
-.home-path-card h2 { margin: .5rem 0; font-size: 1.5rem; }
-.home-path-card p { max-width: 30rem; margin: 0; color: var(--color-text-secondary); }
-.home-path-arrow { position: absolute; right: 1.5rem; bottom: 1rem; color: var(--color-brand-accent); font-size: 1.4rem; }
+.home-services { padding-top: 3rem; }
+.home-services-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }
+.home-services-heading .section-heading { margin: 0; }
+.home-services-heading > .button { flex: none; margin-bottom: .15rem; }
+.home-service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+.home-service-card { min-height: 12rem; padding: 1.4rem 1.5rem 1.5rem 0; }
+.home-service-card + .home-service-card { padding-left: 1.5rem; border-left: 1px solid var(--color-border); }
+.home-service-number { color: var(--color-brand-accent); font-size: .76rem; font-weight: 700; letter-spacing: .06em; }
+.home-service-card h3 { margin: .75rem 0 .45rem; font-size: 1.12rem; }
+.home-service-card p { max-width: 22rem; margin: 0; color: var(--color-text-secondary); font-size: .94rem; }
+.home-industries-link { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1.1rem; }
+.home-industries-link p { margin: 0; color: var(--color-text-secondary); font-size: .92rem; }
+.home-industries-link .text-link { flex: none; }
 .home-faq { background: var(--color-background-secondary); }
 .faq-layout { display: grid; grid-template-columns: minmax(16rem, .85fr) minmax(0, 1.15fr); align-items: start; gap: 5rem; }
 .faq-visual-column { position: sticky; top: 7rem; }
@@ -69,7 +75,7 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
 .faq-help p { margin: .25rem 0 .7rem; color: var(--color-text-secondary); font-size: .92rem; }
 .faq-content .section-heading { margin-bottom: 1.5rem; }
 .faq-content .section-heading h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); }
-.faq-accordion { border-top: 1px solid var(--color-border); }
+.faq-accordion { height: 24rem; overflow-y: auto; border-top: 1px solid var(--color-border); scrollbar-gutter: stable; }
 .faq-item { border-bottom: 1px solid var(--color-border); }
 .faq-question { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.15rem 0; color: var(--color-brand-primary); font-weight: 650; cursor: pointer; list-style: none; }
 .faq-question::-webkit-details-marker { display: none; }
@@ -137,6 +143,7 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
   .hero-inner { grid-template-columns: minmax(0, 1fr) minmax(18rem, 22rem); gap: 2.5rem; }
   .page-intro-layout { grid-template-columns: minmax(0, 1fr) minmax(14rem, .65fr); gap: 2rem; }
   .faq-layout { grid-template-columns: minmax(14rem, .8fr) minmax(0, 1.2fr); gap: 2.5rem; }
+  .footer-top { align-items: flex-start; flex-direction: column; gap: 1rem; }
   .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .industries-layout { gap: 2.5rem; }
   .contact-layout { gap: 3rem; }
@@ -162,6 +169,7 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
   .industries-layout, .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
   .page-intro-layout { grid-template-columns: 1fr; gap: 1.5rem; }
   .faq-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .faq-accordion { height: auto; overflow: visible; scrollbar-gutter: auto; }
   .faq-visual-column { position: static; max-width: 26rem; }
   .faq-illustration { max-height: 15rem; object-fit: contain; }
   .intro-art { min-height: 11rem; max-width: 24rem; }
@@ -169,11 +177,15 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
   .contact-photo { height: 12rem; max-width: 32rem; }
   .industry-list { grid-template-columns: 1fr 1fr; }
   .contact-form { padding: 1.2rem; }
-  .home-path-grid { grid-template-columns: 1fr; }
   .home-outcomes { padding-bottom: 0; }
   .home-outcomes-grid { grid-template-columns: 1fr; }
   .home-outcome, .home-outcome + .home-outcome { padding: 1.25rem 0; border-left: 0; }
   .home-outcome + .home-outcome { border-top: 1px solid var(--color-border); }
+  .home-services-heading { align-items: flex-start; flex-direction: column; gap: 1rem; }
+  .home-service-grid { grid-template-columns: 1fr; }
+  .home-service-card, .home-service-card + .home-service-card { min-height: auto; padding: 1.25rem 0; border-left: 0; }
+  .home-service-card + .home-service-card { border-top: 1px solid var(--color-border); }
+  .home-industries-link { align-items: flex-start; flex-direction: column; }
   .page-intro { padding-block: 3.5rem; }
   .footer-inner { padding-block: 1.25rem; }
   .footer-top { align-items: flex-start; flex-direction: column; gap: 1rem; }
