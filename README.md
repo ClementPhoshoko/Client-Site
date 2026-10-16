@@ -49,7 +49,9 @@ The contact form sends submissions to the Vercel serverless function in `api/con
 1. Create a Resend account, verify a sending domain, and create an API key.
 2. Copy `.env.example` to `.env` and set `RESEND_API_KEY`, `RESEND_FROM_EMAIL` (an address on the verified domain), and `CONTACT_TO_EMAIL`. Set `SITE_URL` to the public website origin so the PHM logo loads in contact notification emails.
 3. Run `npm run dev`. The Vite development server provides the same `/api/contact` endpoint locally.
-4. For Vercel deployment, add those three variables in the project's Environment Variables settings. Do not use a `VITE_` prefix for secrets.
+4. For Vercel deployment, add `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `CONTACT_TO_EMAIL`, and `SITE_URL` in the project's Environment Variables settings. Set `SITE_URL` to the primary production domain (for example, `https://phmps.co.za`). Do not use a `VITE_` prefix for secrets.
+
+The production build writes route-specific titles, descriptions, canonical and social-sharing metadata, a `robots.txt`, and a `sitemap.xml` when `SITE_URL` or Vercel's production-domain environment variable is available. Add the sitemap URL to Google Search Console after deployment. Google can render JavaScript, but the route metadata and social preview tags are also included in the HTML generated for each page.
 
 The form validates required fields, has a honeypot field for basic bot filtering, and displays success and error feedback. Keep `.env` out of version control.
 

@@ -3,6 +3,8 @@ import Hero from '../sections/Hero.jsx'
 import HomeOutcomes from '../sections/HomeOutcomes.jsx'
 import HomeFaq from '../sections/HomeFaq.jsx'
 import HomeServices from '../sections/HomeServices.jsx'
+import Seo from '../components/Seo.jsx'
+import { seoPages } from '../seo.js'
 
 export default function HomePage() {
   const homeRef = useRef(null)
@@ -45,6 +47,7 @@ export default function HomePage() {
   }, [])
 
   return <div className="home-page" ref={homeRef}>
+    <Seo {...seoPages.home} />
     <Hero />
     <HomeOutcomes />
     <HomeServices />

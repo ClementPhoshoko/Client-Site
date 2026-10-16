@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react'
 import Industries from '../sections/Industries.jsx'
+import Seo from '../components/Seo.jsx'
+import { seoPages } from '../seo.js'
 
 export default function IndustriesPage() {
   const industriesRef = useRef(null)
@@ -26,6 +28,7 @@ export default function IndustriesPage() {
   }, [])
 
   return <div className="industries-page" ref={industriesRef}>
+    <Seo {...seoPages.industries} />
     <div className="page-intro page-intro--industries"><div className="container page-intro-layout">
       <div data-industries-reveal><p className="eyebrow">Who we help</p><h1>Technology support for growing teams.</h1>
         <p>Clear, dependable IT support shaped around the needs of your organisation.</p></div>

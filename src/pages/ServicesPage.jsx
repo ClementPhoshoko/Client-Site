@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react'
 import Services from '../sections/Services.jsx'
+import Seo from '../components/Seo.jsx'
+import { seoPages } from '../seo.js'
 
 export default function ServicesPage() {
   const servicesRef = useRef(null)
@@ -26,6 +28,7 @@ export default function ServicesPage() {
   }, [])
 
   return <div className="services-page" ref={servicesRef}>
+    <Seo {...seoPages.services} />
     <div className="page-intro"><div className="container page-intro-layout">
       <div data-services-reveal><p className="eyebrow">PHM services</p><h1>Practical IT support for your organisation.</h1>
         <p>From everyday assistance to cloud and cybersecurity, get the right support to keep work moving.</p></div>

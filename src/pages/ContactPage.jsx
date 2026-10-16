@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react'
 import Contact from '../sections/Contact.jsx'
+import Seo from '../components/Seo.jsx'
+import { seoPages } from '../seo.js'
 
 export default function ContactPage() {
   const contactRef = useRef(null)
@@ -26,6 +28,7 @@ export default function ContactPage() {
   }, [])
 
   return <div className="contact-page" ref={contactRef}>
+    <Seo {...seoPages.contact} />
     <div className="page-intro page-intro--contact"><div className="container page-intro-layout">
       <div data-contact-reveal><p className="eyebrow">Talk to Us</p><h1>Tell us how we can help.</h1>
         <p>Send an enquiry and we’ll get back to you to discuss a practical next step.</p></div>
