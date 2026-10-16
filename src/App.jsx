@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect } from 'react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
+import IntroOverlay from './components/IntroOverlay.jsx'
 import HomePage from './pages/HomePage.jsx'
 import ServicesPage from './pages/ServicesPage.jsx'
 import IndustriesPage from './pages/IndustriesPage.jsx'
@@ -40,6 +41,7 @@ export default function App() {
   return <BrowserRouter>
     <ScrollToTop />
     <Header />
+    <IntroOverlay />
     <main>
       <Routes>
         <Route path="/" element={<HomePage />} />

@@ -12,6 +12,29 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--color-focus-rin
 .wordmark { display: inline-flex; align-items: center; color: var(--color-brand-primary); text-decoration: none; white-space: nowrap; }
 .wordmark-logo-window { position: relative; display: block; width: 11.75rem; height: 4.6rem; overflow: hidden; }
 .wordmark-logo { position: absolute; top: -2.05rem; left: 0; display: block; width: 11.75rem; height: auto; }
+.intro-is-active .wordmark-logo-window { visibility: hidden; }
+.intro-overlay { position: fixed; inset: 0; z-index: 20; width: 100vw; height: 100vh; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; overflow: hidden; border: 0; background: var(--color-background); color: var(--color-brand-primary); }
+.intro-overlay[open] { display: block; }
+.intro-overlay::backdrop { background: transparent; }
+.intro-overlay--exiting { animation: intro-overlay-exit .27s ease forwards; }
+.intro-stage { position: absolute; inset: 0; display: grid; place-items: center; }
+.intro-logo-window { position: relative; display: block; width: clamp(18rem, 32vw, 24rem); aspect-ratio: 11.75 / 4.6; overflow: hidden; container-type: inline-size; transform-origin: center; }
+.intro-logo { position: absolute; top: -17.45cqw; left: 0; display: block; width: 100%; height: auto; }
+.intro-logo-window::after { position: absolute; top: -10%; bottom: -10%; left: -35%; width: 26%; background: linear-gradient(100deg, transparent, rgb(255 255 255 / 92%), transparent); content: ''; pointer-events: none; transform: skewX(-20deg); animation: intro-shine .82s cubic-bezier(.2, .7, .2, 1) .42s both; }
+.intro-slogan { position: absolute; top: calc(50% + clamp(5.5rem, 12vw, 7.25rem)); right: 1rem; left: 1rem; display: grid; min-height: 2.4em; place-items: center; margin: 0; color: var(--color-text-secondary); font-size: clamp(1.05rem, 2.2vw, 1.35rem); font-weight: 600; letter-spacing: -.02em; text-align: center; transition: opacity .22s ease, transform .22s ease; }
+.intro-slogan span { animation: intro-slogan-in .38s cubic-bezier(.22, 1, .36, 1) both; }
+.intro-slogan--leaving { opacity: 0; transform: translateY(-.25rem); }
+@keyframes intro-shine { from { transform: translateX(0) skewX(-20deg); } to { transform: translateX(620%) skewX(-20deg); } }
+@keyframes intro-slogan-in { from { opacity: 0; transform: translateY(.35rem); } to { opacity: 1; transform: translateY(0); } }
+@keyframes intro-overlay-exit { to { opacity: 0; } }
+@media (max-width: 760px) {
+  .intro-logo-window { width: min(21rem, 76vw); aspect-ratio: 9.4 / 3.1; }
+  .intro-logo { top: -18.94cqw; }
+}
+@media (max-width: 400px) {
+  .intro-logo-window { width: min(17rem, 72vw); aspect-ratio: 7.2 / 3.1; }
+  .intro-logo { top: -18.89cqw; }
+}
 .main-nav { display: flex; align-items: center; justify-content: flex-end; gap: 2rem; margin-left: auto; }
 .nav-toggle { display: none; border: 0; background: transparent; color: var(--color-brand-primary); cursor: pointer; }
 .nav-toggle-lines { display: grid; width: 1.2rem; gap: .23rem; }
@@ -150,6 +173,10 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
 .industries-page .industry-list [data-industries-reveal]:nth-child(2), .industries-page .industry-list [data-industries-reveal]:nth-child(4) { transition-delay: 60ms; }
 .industries-page .industry-list [data-industries-reveal]:nth-child(3), .industries-page .industry-list [data-industries-reveal]:nth-child(5) { transition-delay: 120ms; }
 .industries-page .industry-list [data-industries-reveal]:nth-child(6) { transition-delay: 180ms; }
+@keyframes industry-list-vibrate { 0%, 100% { transform: translateX(0); } 22% { transform: translateX(-1.5px); } 44% { transform: translateX(1.5px); } 66% { transform: translateX(-1px); } 84% { transform: translateX(.75px); } }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .industries-page .industry-list li:hover { animation: industry-list-vibrate .34s ease-in-out; }
+}
 .contact-section { padding-block: 6.5rem; background-color: var(--color-background-secondary); background-image: url('/assets/Modern%20Cloud%20Tech%20Ecosystem.png'); background-repeat: no-repeat; background-position: 14% bottom; background-size: min(28rem, 38vw) auto; }
 .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; }
 .contact-copy .section-heading { margin-bottom: 2rem; }
@@ -229,6 +256,8 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
   .faq-visual-column { max-width: 28rem; }
   .faq-accordion { height: auto; overflow: visible; padding: .25rem .5rem; scrollbar-gutter: auto; }
   .page-intro--contact { background-size: cover, auto 140%; }
+  .page-intro--contact .page-intro-layout > div:first-child > p:last-child, .page-intro--industries .page-intro-layout > div:first-child > p:last-child { color: #f8fafc; text-shadow: 0 1px 8px rgb(13 27 48 / 48%); }
+  .services-page .intro-art { display: none; }
   .contact-section { padding-block: 5rem; background-position: 12% bottom; background-size: min(22rem, 55vw) auto; }
   .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
   .services-page .page-intro-layout { grid-template-columns: minmax(0, 1.15fr) minmax(13rem, .85fr); gap: 1.4rem; }
@@ -298,4 +327,4 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
   .page-intro--industries { background-size: cover, auto 120%; }
   .industries-page .industry-list { grid-template-columns: 1fr; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } .home-page [data-home-reveal] { opacity: 1; transform: none; transition: none; } .home-page > section > .container { opacity: 1; transform: none; transition: none; } .home-page > section .home-outcome h3, .home-page > section .home-service-card h3 { transform: none; transition: none; } .services-page [data-services-reveal] { opacity: 1; transform: none; transition: none; } .industries-page [data-industries-reveal] { opacity: 1; transform: none; transition: none; } .contact-page [data-contact-reveal] { opacity: 1; transform: none; transition: none; } .contact-copy--enter, .contact-form--enter { animation: none; opacity: 1; transform: none; } .main-nav.main-nav--open a { animation: none; opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } .intro-logo-window::after, .intro-slogan span, .intro-overlay--exiting { animation: none; } .intro-overlay--exiting { opacity: 0; } .home-page [data-home-reveal] { opacity: 1; transform: none; transition: none; } .home-page > section > .container { opacity: 1; transform: none; transition: none; } .home-page > section .home-outcome h3, .home-page > section .home-service-card h3 { transform: none; transition: none; } .services-page [data-services-reveal] { opacity: 1; transform: none; transition: none; } .industries-page [data-industries-reveal] { opacity: 1; transform: none; transition: none; } .contact-page [data-contact-reveal] { opacity: 1; transform: none; transition: none; } .contact-copy--enter, .contact-form--enter { animation: none; opacity: 1; transform: none; } .main-nav.main-nav--open a { animation: none; opacity: 1; transform: none; } }
