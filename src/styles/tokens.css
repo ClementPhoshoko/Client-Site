@@ -1,0 +1,15 @@
+:root {
+  color-scheme: light;
+
+  --color-brand-primary: #0d1b30;
+  --color-brand-accent: #148be1;
+  --color-background: #ffffff;
+  --color-background-secondary: #f3f7fb;
+  --color-surface: #ffffff;
+  --color-text-primary: #0d1b30;
+  --color-text-secondary: #64748b;
+  --color-border: #e2e8f0;
+  --color-button-primary: #148be1;
+  --color-button-hover: #1177c5;
+  --color-focus-ring: #148be1;
+}
