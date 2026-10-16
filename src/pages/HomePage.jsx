@@ -25,7 +25,23 @@ export default function HomePage() {
       observer.observe(element)
     })
 
-    return () => observer.disconnect()
+    const sections = [...root.querySelectorAll(':scope > section')]
+    const sectionVisibility = new Map()
+    const focusObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => sectionVisibility.set(entry.target, entry.intersectionRatio))
+      const focusedSection = [...sectionVisibility.entries()]
+        .filter(([, ratio]) => ratio > 0)
+        .sort((a, b) => b[1] - a[1])[0]?.[0]
+
+      sections.forEach((section) => section.classList.toggle('home-section--focused', section === focusedSection))
+    }, { threshold: [0, 0.2, 0.4, 0.6, 0.8, 1] })
+
+    sections.forEach((section) => focusObserver.observe(section))
+
+    return () => {
+      observer.disconnect()
+      focusObserver.disconnect()
+    }
   }, [])
 
   return <div className="home-page" ref={homeRef}>

@@ -67,6 +67,10 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
 .home-industries-link .text-link { flex: none; }
 .home-page [data-home-reveal] { transition: opacity .58s ease, transform .58s cubic-bezier(.22, 1, .36, 1); }
 .home-page [data-home-reveal].home-reveal--pending { opacity: 0; transform: translateY(12px); }
+.home-page > section > .container { opacity: .94; transform: scale(.985); transform-origin: center top; transition: opacity .42s ease, transform .52s cubic-bezier(.22, 1, .36, 1); }
+.home-page > section.home-section--focused > .container { opacity: 1; transform: scale(1); }
+.home-page > section .home-outcome h3, .home-page > section .home-service-card h3 { transform: scale(.99); transform-origin: left center; transition: transform .42s cubic-bezier(.22, 1, .36, 1); }
+.home-page > section.home-section--focused .home-outcome h3, .home-page > section.home-section--focused .home-service-card h3 { transform: scale(1.025); }
 .home-outcomes-grid [data-home-reveal]:nth-child(2), .home-service-grid [data-home-reveal]:nth-child(2) { transition-delay: 70ms; }
 .home-outcomes-grid [data-home-reveal]:nth-child(3), .home-service-grid [data-home-reveal]:nth-child(3) { transition-delay: 140ms; }
 .home-faq { background: var(--color-background-secondary); }
@@ -195,4 +199,4 @@ h1 { max-width: 12ch; margin: 0; font-size: clamp(2.8rem, 6vw, 5rem); font-weigh
   .footer-details { grid-template-columns: 1fr; gap: .75rem; }
   .footer-bottom { align-items: flex-start; flex-direction: column; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } .home-page [data-home-reveal] { opacity: 1; transform: none; transition: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } .home-page [data-home-reveal] { opacity: 1; transform: none; transition: none; } .home-page > section > .container { opacity: 1; transform: none; transition: none; } .home-page > section .home-outcome h3, .home-page > section .home-service-card h3 { transform: none; transition: none; } }
