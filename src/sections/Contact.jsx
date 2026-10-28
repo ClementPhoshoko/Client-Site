@@ -40,7 +40,7 @@ export default function Contact() {
       <SectionHeading eyebrow="Get in touch" title="Let’s make IT work better for you." description="Tell us what your organisation needs. We’ll be happy to talk through a practical next step." />
       <dl className="contact-details">
         <div><dt>Phone</dt><dd><a href="tel:+27733182386">+27 73 318 2386</a></dd></div>
-        <div><dt>Email</dt><dd><a href="mailto:info@phmps.co.za">info@phmps.co.za</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:information@phmps.co.za">information@phmps.co.za</a></dd></div>
         <div><dt>Address</dt><dd>6606 Musese Street, Birch Acres,<br />Kempton Park, South Africa</dd></div>
       </dl>
     </div>

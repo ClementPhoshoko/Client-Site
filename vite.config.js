@@ -46,7 +46,7 @@ function searchMetadataPlugin(siteOrigin) {
             image: socialImageUrl,
             logo: logoUrl,
             telephone: '+27733182386',
-            email: 'info@phmps.co.za',
+            email: 'information@phmps.co.za',
             address: {
               '@type': 'PostalAddress',
               streetAddress: '6606 Musese Street, Birch Acres',

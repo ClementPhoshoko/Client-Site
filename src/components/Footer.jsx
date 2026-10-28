@@ -9,7 +9,7 @@ export default function Footer() {
       </Link>
       <address className="footer-details">
         <div><span>Phone</span><a href="tel:+27733182386">+27 73 318 2386</a></div>
-        <div><span>Email</span><a href="mailto:info@phmps.co.za">info@phmps.co.za</a></div>
+        <div><span>Email</span><a href="mailto:information@phmps.co.za">information@phmps.co.za</a></div>
         <div><span>Address</span><p>6606 Musese Street, Birch Acres,<br />Kempton Park, South Africa</p></div>
       </address>
     </div>

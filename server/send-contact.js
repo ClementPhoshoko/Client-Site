@@ -42,7 +42,7 @@ function buildContactEmail({ name, email, organisation, message }, siteUrl) {
           <tr><td style="padding:28px 0 16px;"><hr style="height:0;border:0;border-top:1px solid #dbe3ec;margin:0;"></td></tr>
           <tr><td style="color:#64748b;font-size:12px;line-height:1.7;">
             <p style="margin:0 0 4px;color:#26384e;font-weight:600;">PHM Professional Services</p>
-            <p style="margin:0;"><a href="mailto:info@phmps.co.za" style="color:#53657b;text-decoration:none;">info@phmps.co.za</a> &nbsp;·&nbsp; +27 73 318 2386</p>
+            <p style="margin:0;"><a href="mailto:information@phmps.co.za" style="color:#53657b;text-decoration:none;">information@phmps.co.za</a> &nbsp;·&nbsp; +27 73 318 2386</p>
             <p style="margin:4px 0 0;">6606 Musese Street, Birch Acres, Kempton Park, South Africa</p>
           </td></tr>
         </table>

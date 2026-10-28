@@ -83,7 +83,7 @@ Include schools, churches, catering businesses, and other small businesses, incl
 Show the following contact details consistently wherever contact information appears:
 
 - **Phone:** +27 73 318 2386
-- **Email:** [info@phmps.co.za](mailto:info@phmps.co.za)
+- **Email:** [information@phmps.co.za](mailto:information@phmps.co.za)
 - **Address:** 6606 Musese Street, Birch Acres, Kempton Park, South Africa
 
 Include a contact form so visitors can submit an enquiry and PHM can receive it by email. The form needs a real email-delivery integration (for example, a server-side endpoint or a suitable form service); a front-end-only form cannot deliver email. Select and configure that integration during implementation, keep credentials out of browser code, and provide clear success and error feedback to visitors.

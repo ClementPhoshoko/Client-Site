@@ -21,7 +21,7 @@ const questions = [
     question: 'How can I contact PHM?',
     answer: <>
       <a href="tel:+27733182386">+27 73 318 2386</a><br />
-      <a href="mailto:info@phmps.co.za">info@phmps.co.za</a><br />
+      <a href="mailto:information@phmps.co.za">information@phmps.co.za</a><br />
       6606 Musese Street, Birch Acres, Kempton Park, South Africa.
     </>,
   },
